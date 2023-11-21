@@ -1,19 +1,41 @@
 @charset "UTF-8";
 
+.bg-primary{background-color: #a84a10!important;}
+
+
+
 /* Typography */
 @import url("../dependencies/icons-1.11.1/font/bootstrap-icons.css");
 .font-white{color: white;}
 
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	& strong{
+		font-family: 'Pacifico', cursive;
+	}
+}
+
 header{
   font-weight: bold;
   background: rgba(255, 255, 255, 0.8);
-	&.link-secondary:hover, .link-secondary:focus, header .link-dark:hover, .link-dark:focus{
-  	color: #488A83 !important;
-}
+	
+    & .link-secondary:hover, 
+    & .link-secondary:focus,  
+    & .link-dark:hover, 
+    & .link-dark:focus{
+  	color: #a84a10 !important;
+    }
 }
 
 .container{
-  min-height: 100vh;
+  /*min-height: 100vh;*/
 }
 
 .vertical-center {
@@ -26,7 +48,7 @@ header{
 
 .hero-banner{
   min-height: 100vh;
-  background: url("../img/cello-band-1.jpg") rgba(138, 93, 72, 0.7);
+  background: url("../img/cello-band-1.jpg") rgba(#000, 0.7);
   background-size: cover;
   background-blend-mode: multiply;
 
@@ -40,13 +62,13 @@ header{
 
 /* Buttons */
 .btn-primary{
-  background-color: #488A83;
-  border-color: #488A83;
+  background-color: #a84a10;
+  border-color: #a84a10;
 }
 
 .btn-primary:hover{
-  background-color: #407a73;
-  border-color: #407a73;
+  background-color: #99430d;
+  border-color: #99430d;
 }
 
 
