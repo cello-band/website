@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* Typography */
+@import url("../dependencies/icons-1.11.1/font/bootstrap-icons.css");
+.font-white{color: white;}
+
+header{
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.8);
+	&.link-secondary:hover, .link-secondary:focus, header .link-dark:hover, .link-dark:focus{
+  	color: #488A83 !important;
+}
+}
+
+.container{
+  min-height: 100vh;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner{
+  min-height: 100vh;
+  background: url("../img/cello-band-1.jpg") rgba(138, 93, 72, 0.7);
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  -webkit-box-shadow: inset 1px 1px 31px -6px #000000;
+  box-shadow: inset 1px 1px 31px -6px #000000;
+
+  padding: 5em 8em;
+}
+
+
+
+/* Buttons */
+.btn-primary{
+  background-color: #488A83;
+  border-color: #488A83;
+}
+
+.btn-primary:hover{
+  background-color: #407a73;
+  border-color: #407a73;
+}
+
+
+
+.icon-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 0.75rem;
+}
+
+
+.bg-light{
+  background-color: #e5e1dc!important;
+}
