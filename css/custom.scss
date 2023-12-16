@@ -1,12 +1,15 @@
 @charset "UTF-8";
 
-.bg-primary{background-color: #a84a10!important;}
-
+.bg-primary {
+  background-color: #a84a10 !important;
+}
 
 
 /* Typography */
 @import url("../dependencies/icons-1.11.1/font/bootstrap-icons.css");
-.font-white{color: white;}
+.font-white {
+  color: white;
+}
 
 
 /* Typography */
@@ -14,12 +17,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-
-
-
 // ------------- MIXINS ------------- //
 @mixin transition($time, $property: all, $easing: ease-in) {
-    transition: $property $time $easing;
+  transition: $property $time $easing;
 }
 
 // ------------- VARIABLES ------------- //
@@ -31,6 +31,158 @@ $slide-number: 3;
 html, body {
   overflow: hidden;
 }
+
+
+/* default css start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* navbar regular css start */
+.navbar-area {
+  z-index: 1;
+  background: rgba(255, 255, 255, .6);
+  border-bottom: 1px solid #000;
+}
+
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.site-logo {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+}
+
+.site-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.site-navbar ul li a {
+  color: black;
+  padding: 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.site-navbar ul li a:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+/* navbar regular css end */
+
+
+/* nav-toggler css start */
+.nav-toggler {
+  border: 2px solid white;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 39px;
+  display: none;
+}
+
+.nav-toggler span,
+.nav-toggler span:before,
+.nav-toggler span:after {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  display: block;
+  transition: .3s;
+}
+
+.nav-toggler span:before {
+  content: '';
+  transform: translateY(-9px);
+}
+
+.nav-toggler span:after {
+  content: '';
+  transform: translateY(6px);
+}
+
+.nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+
+.nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+
+.nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/* nav-toggler css start */
+
+
+.header-area {
+  position: relative;
+  z-index: 100;
+
+  @media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+      max-width: 768px;
+    }
+  }
+
+  /* mobile breakpoint start */
+  @media screen and (max-width: 767px) {
+    .container {
+      max-width: 768px !important;
+    }
+    /* navbar css for mobile start */
+    .nav-toggler {
+      display: block;
+    }
+    .site-navbar {
+      min-height: 60px;
+    }
+    .site-navbar ul {
+      position: absolute;
+      width: 100%;
+      height: calc(100vh - 60px);
+      left: 0;
+      top: 60px;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #444;
+      background-color: rgba(255, 255, 255, .85);
+      max-height: 0;
+      overflow: hidden;
+      transition: .3s;
+    }
+    .site-navbar ul li {
+      width: 100%;
+      text-align: center;
+    }
+    .site-navbar ul li a {
+      padding: 25px;
+    }
+    .site-navbar ul li a:hover {
+      background-color: rgba(0, 0, 0, .1);
+    }
+    .site-navbar ul.open {
+      max-height: 100vh;
+      overflow: visible;
+    }
+    /* navbar css for mobile end */
+  }
+}
+
+/* mobile breakpoint end */
 
 .background {
   background-size: cover;
@@ -44,6 +196,7 @@ html, body {
   width: 100%;
   transform: translateY($parallax-offset);
   @include transition($transition-speed, all, cubic-bezier(0.22, 0.44, 0, 1));
+
   &:before {
     content: "";
     position: absolute;
@@ -55,104 +208,109 @@ html, body {
     bottom: 0;
     //background-color: rgba(0,0,0,.3);
   }
-  
+
 }
 
 /* Set stacking context of slides */
 @for $i from 1 to ($slide-number + 1) {
-    .background:nth-child(#{$i}) {
-        z-index: ($slide-number + 1) - $i; 
-    }
+  .background:nth-child(#{$i}) {
+    z-index: ($slide-number + 1) - $i;
+  }
 }
 
 .content {
   &-wrapper {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-flow: column nowrap;
-  transform: translateY($content-offset);
-  will-change: transform;
-  backface-visibility: hidden;
-  @include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    transform: translateY($content-offset);
+    will-change: transform;
+    backface-visibility: hidden;
+    @include transition($transition-speed + .5, all, cubic-bezier(0.22, 0.44, 0, 1));
   }
 }
 
 // ------------- SET TRANSFORM VALUES ------------- //
 
 .background.up-scroll {
-  transform: translate3d(0,-$parallax-offset / 2,0);
+  transform: translate3d(0, -$parallax-offset / 2, 0);
+
   .content-wrapper {
     transform: translateY($parallax-offset / 2);
   }
+
   + .background {
-    transform: translate3d(0,$parallax-offset,0);
-      .content-wrapper {
-        transform: translateY($parallax-offset);
-      }
+    transform: translate3d(0, $parallax-offset, 0);
+
+    .content-wrapper {
+      transform: translateY($parallax-offset);
     }
+  }
 }
 
 .background.down-scroll {
-  transform: translate3d(0,-(100vh + $parallax-offset),0);
+  transform: translate3d(0, -(100vh + $parallax-offset), 0);
+
   .content-wrapper {
     transform: translateY($content-offset);
   }
+
   + .background:not(.down-scroll) {
-    transform: translate3d(0,-$parallax-offset / 2,0);
-      .content-wrapper {
-        transform: translateY($parallax-offset / 2);
-      }
+    transform: translate3d(0, -$parallax-offset / 2, 0);
+
+    .content-wrapper {
+      transform: translateY($parallax-offset / 2);
+    }
   }
 }
 
 
-
-body{
-    font-family: 'Montserrat Alternates', sans-serif;
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
-main{
-        background-image: url(../img/cellokasten-celloband-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-height: 100vh;
-    overflow-y: scroll;
+main {
+  background-image: url(../img/cellokasten-celloband-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  overflow-y: scroll;
 
 }
 
 
-h1, h2, h3, h4, h5, h6{
-	& strong{
-		font-family: 'Pacifico', cursive;
-	}
+h1, h2, h3, h4, h5, h6 {
+  & strong {
+    font-family: 'Pacifico', cursive;
+  }
 }
 
-header{
+header {
   font-weight: bold;
   background: rgba(255, 255, 255, 0.8);
-	
-    & .link-secondary:hover, 
-    & .link-secondary:focus,  
-    & .link-dark:hover, 
-    & .link-dark:focus{
-  	color: #a84a10 !important;
-    }
+
+  & .link-secondary:hover,
+  & .link-secondary:focus,
+  & .link-dark:hover,
+  & .link-dark:focus {
+    color: #a84a10 !important;
+  }
 }
 
-.scroll-container{
+.scroll-container {
   /*min-height: 100vh;*/
 }
 
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
 
   display: flex;
   align-items: center;
 }
 
-.hero-banner{
+.hero-banner {
   min-height: 100vh;
   background: url("../img/cello-band-1.jpg") rgba(#000, 0.7);
   background-size: cover;
@@ -165,31 +323,29 @@ header{
 }
 
 
-
 /* Buttons */
-.btn-primary{
+.btn-primary {
   background-color: #a84a10;
   border-color: #a84a10;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: #99430d;
   border-color: #99430d;
 }
 
 
-
 .icon-square {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    border-radius: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 0.75rem;
 }
 
 
-.bg-light{
-  background-color: #e5e1dc!important;
+.bg-light {
+  background-color: #e5e1dc !important;
 }
