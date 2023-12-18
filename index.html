@@ -8,8 +8,11 @@
     <script src="dependencies/bootstrap-5.3.2-dist/js/bootstrap.js" charset="utf-8"></script>
     <script src="dependencies/jquery-3.7.1.slim.min.js" charset="utf-8"></script>
     <script src="dependencies/lodash.min.js" charset="utf-8"></script>
+    <script src="dependencies/aos-master/dist/aos.js" charset="utf-8"></script>
     <script src="js/custom.js" charset="utf-8"></script>
+
     <link rel="stylesheet" href="dependencies/bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="dependencies/aos-master/dist/aos.css">
     <link rel="stylesheet" href="css/custom.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,207 +46,235 @@
     </div><!-- navbar-area end -->
 </header>
 
-
 <main>
 
 
-    <div class="scroll-container">
-        <section class="background">
-            <div class="content-wrapper px-5">
-                <div class="row align-items-center g-5 py-5">
-                    <!--<div class="row flex-lg-row-reverse align-items-center g-5 py-5 hero-banner">-->
+    <div class="container-fluid page-wrapper">
 
-                    <div class="col-10 col-sm-8 col-lg-6">
-                        <!-- <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"> -->
+
+        <!--     -----------------------   Intro   ----------------------- -->
+        <div id="intro" class="row vh-100 align-items-center">
+            <div class="col">
+            </div>
+            <div class="col px-5" data-aos="zoom-out-left" >
+                <h1 class="display-5 fw-bold lh-1 mb-3">Responsive <strong>left-aligned</strong> hero with image
+                </h1>
+                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                    world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
+                    responsive grid system, extensive prebuilt components, and
+                    powerful JavaScript plugins.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 mb-5">Primary</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!--     -----------------------   About   ----------------------- -->
+        <div id="about" class="row vh-100 align-items-center">
+            <div class="col">
+            </div>
+            <div class="col px-5" data-aos="zoom-out-left">
+                <h2 class="display-5 fw-bold lh-1 mb-3">Vita</h2>
+                <p class="lead">Die Cello.Band wurde im Frühjahr 2019 von vier Cellisten des KIT-Sinfonieorchesters in
+                    Karlsruhe gegründet. Erste Auftritte fanden im selben Jahr bei der Campus-Klassik-Bühne, dem
+                    Uni-Fest am
+                    KIT und dem Chaos Computer Club in Karlsruhe statt.
+                    2020 wurde die Besetzung um zwei weitere feste Mitglieder aus dem KIT-Sinfonieorchester ergänzt.
+                    Durch
+                    berufsbedingten Wegzug einiger Musiker erhielt das Ensemble im Herbst 2023 erneut Zuwachs, aktuell
+                    besteht die Cello.Band aus fünf CellistInnen, drei davon gehören zu den Gründungsmitgliedern.
+                    Seit Ihrem Bestehen erarbeitet sich die Cello.Band fortwährend ein umfangreiches und breit
+                    gefächertes
+                    Repertoire. Auf dem Programm stehen neben klassische Werke aller Epochen lateinamerikanische Tänze
+                    sowie
+                    Arrangements aus Bereichen der Film-, Rock- und Popmusik.
+                    Seit 2020 tritt die Cello.Band sowohl bei öffentlichen als auch bei diversen privaten
+                    Veranstaltungen,
+                    z.B. Hauskonzerten und Hochzeiten, im Karlsruher Raum auf. Dazu gehört unter anderem die regelmäßige
+                    Beteiligung an der musikalischen Gestaltung der Gottesdienste in der evangelischen Stadtkirche
+                    Karlsruhe. In den Sommermonaten verlagert das Ensemble seine musikalische Aktivität gerne auf die
+                    Straße
+                    und ist bevorzugt vor dem Karlsruher Schloss oder dem Kammertheater Karlsruhe zu finden.
+                    Auf mehrtägigen Straßenmusik-Trips waren die Musiker aber auch bereits in Zürich, München und
+                    Baden-Baden zu hören.
+                    Ihren offiziellen Namen trägt die Cello.Band seit 2021.</p>
+            </div>
+        </div>
+
+
+        <!--     -----------------------   Repertoire   ----------------------- -->
+        <div id="repertoire" class="row vh-100 align-items-center">
+            <div class="col">
+            </div>
+            <div class="col px-5" data-aos="zoom-out-left">
+                <h2 class="display-5 fw-bold lh-1 mb-3">Vita</h2>
+                <p class="lead">Die Cello.Band wurde im Frühjahr 2019</p>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div class="col d-flex align-items-start">
+                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                            <i class="bi-alarm"></i>
+                        </div>
+                        <div>
+                            <h3>Featured title</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                                sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                                Primary button
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <h1 class="display-5 fw-bold lh-1 mb-3">Responsive <strong>left-aligned</strong> hero with image
-                        </h1>
-                        <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
-                            world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
-                            responsive grid system, extensive prebuilt components, and
-                            powerful JavaScript plugins.</p>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 mb-5">Primary</button>
+                    <div class="col d-flex align-items-start">
+                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                            <i class="bi-alarm"></i>
+                        </div>
+                        <div>
+                            <h3>Featured title</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                                sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                                Primary button
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                            <i class="bi-alarm"></i>
+                        </div>
+                        <div>
+                            <h3>Featured title</h3>
+                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                                sentence and probably just keep going until we run out of words.</p>
+                            <a href="#" class="btn btn-primary">
+                                Primary button
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="background">
-            <div class="content-wrapper">
-                <p class="content-title">Cras lacinia non eros nec semper.</p>
-                <p class="content-subtitle">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-                    inceptos himenaeos. Cras ut massa mattis nibh semper pretium.</p>
+        </div>
+
+
+        <!--     -----------------------   News   ----------------------- -->
+        <div id="news" class="row vh-100 align-items-center">
+            <div class="col">
             </div>
-        </section>
-        <section class="background">
-            <div class="content-wrapper">
-                <p class="content-title">Etiam consequat lectus.</p>
-                <p class="content-subtitle">Nullam tristique urna sed tellus ornare congue. Etiam vitae erat at nibh
-                    aliquam dapibus.</p>
+            <div class="col px-5" data-aos="zoom-out-left">
+                <h2 class="display-5 fw-bold lh-1 mb-3">News
+                </h2>
+                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                    world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
+                    responsive grid system, extensive prebuilt components, and
+                    powerful JavaScript plugins.</p>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="videos/pink panther.mp4" allowfullscreen
+                                        width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
+                                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                        focusable="false"></iframe>
+                            </div>
+                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg> -->
+
+                            <div class="card-body">
+                                <p class="card-text">Pink Panther während einer Vernissage</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                                    </div>
+                                    <small class="text-muted">Numbers of Likes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+
     </div>
 
 
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 ">Vita</h1>
-            <p class="lead ">Die Cello.Band wurde im Frühjahr 2019 von vier Cellisten des KIT-Sinfonieorchesters in
-                Karlsruhe gegründet. Erste Auftritte fanden im selben Jahr bei der Campus-Klassik-Bühne, dem Uni-Fest am
-                KIT und dem Chaos Computer Club in Karlsruhe statt.
-                2020 wurde die Besetzung um zwei weitere feste Mitglieder aus dem KIT-Sinfonieorchester ergänzt. Durch
-                berufsbedingten Wegzug einiger Musiker erhielt das Ensemble im Herbst 2023 erneut Zuwachs, aktuell
-                besteht die Cello.Band aus fünf CellistInnen, drei davon gehören zu den Gründungsmitgliedern.
-                Seit Ihrem Bestehen erarbeitet sich die Cello.Band fortwährend ein umfangreiches und breit gefächertes
-                Repertoire. Auf dem Programm stehen neben klassische Werke aller Epochen lateinamerikanische Tänze sowie
-                Arrangements aus Bereichen der Film-, Rock- und Popmusik.
-                Seit 2020 tritt die Cello.Band sowohl bei öffentlichen als auch bei diversen privaten Veranstaltungen,
-                z.B. Hauskonzerten und Hochzeiten, im Karlsruher Raum auf. Dazu gehört unter anderem die regelmäßige
-                Beteiligung an der musikalischen Gestaltung der Gottesdienste in der evangelischen Stadtkirche
-                Karlsruhe. In den Sommermonaten verlagert das Ensemble seine musikalische Aktivität gerne auf die Straße
-                und ist bevorzugt vor dem Karlsruher Schloss oder dem Kammertheater Karlsruhe zu finden.
-                Auf mehrtägigen Straßenmusik-Trips waren die Musiker aber auch bereits in Zürich, München und
-                Baden-Baden zu hören.
-                Ihren offiziellen Namen trägt die Cello.Band seit 2021.
-            </p>
-            <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-        </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+        <div class="item" data-aos="fade-up">1</div>
+        <div class="item" data-aos="fade-down">2</div>
+        <div class="item" data-aos="fade-right">3</div>
+        <div class="item" data-aos="zoom-out-left">4</div>
+
+        <div class="item" data-aos="zoom-in">5</div>
+        <div class="item" data-aos="zoom-out">6</div>
+
+        <div class="item" data-aos="slide-up">7</div>
+
+        <div class="item" data-aos="flip-up">8</div>
+        <div class="item" data-aos="flip-down">9</div>
+        <div class="item" data-aos="flip-right">10</div>
+        <div class="item" data-aos="flip-left">11</div>
+
     </div>
 
 
-    <div class="container px-4 py-5" id="about">
-        <div>
-            <h2 class="pb-2 text-center">Hanging icons</h2>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                        <i class="bi-alarm"></i>
-                    </div>
-                    <div>
-                        <h3>Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                            sentence and probably just keep going until we run out of words.</p>
-                        <a href="#" class="btn btn-primary">
-                            Primary button
-                        </a>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                        <i class="bi-alarm"></i>
-                    </div>
-                    <div>
-                        <h3>Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                            sentence and probably just keep going until we run out of words.</p>
-                        <a href="#" class="btn btn-primary">
-                            Primary button
-                        </a>
-                    </div>
-                </div>
-                <div class="col d-flex align-items-start">
-                    <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                        <i class="bi-alarm"></i>
-                    </div>
-                    <div>
-                        <h3>Featured title</h3>
-                        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                            sentence and probably just keep going until we run out of words.</p>
-                        <a href="#" class="btn btn-primary">
-                            Primary button
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="album py-5">
-        <div class="container">
 
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="videos/pink panther.mp4" allowfullscreen
-                                    width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
-                                    aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                                    focusable="false"></iframe>
-                        </div>
-                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                          <title>Placeholder</title>
-                          <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg> -->
-
-                        <div class="card-body">
-                            <p class="card-text">Pink Panther während einer Vernissage</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
-                                    <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                                </div>
-                                <small class="text-muted">Numbers of Likes</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
-
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                             preserveAspectRatio="xMidYMid slice" focusable="false">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#55595c"></rect>
-                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                        </svg>
-
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 </main>
 
-
+<script>
+    console.log('init')
+    AOS.init({
+        duration: 1000,
+    })
+</script>
 </body>
 
 </html>
