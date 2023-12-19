@@ -23,16 +23,37 @@ body {
 .page-wrapper{
   &::before{
     content: "";
-    background-image: url(../img/cellokasten-celloband-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    //background-image: url(../img/cellokasten-celloband-bg.jpg);
+    //background-size: cover;
+    //background-repeat: no-repeat;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     z-index: -1;
-    background-color: #CECBCA;
+    background: rgb(205,202,201);
+    background: linear-gradient(270deg, rgba(205,202,201,1) 0%, rgba(255,255,255,1) 100%);
+  }
+  &::after{
+    content: "";
+    background-image: url(../img/cello-kasten-single.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    /* display: block; */
+    width: 50%;
+    top: 0;
+    height: 100vh;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    &::after {
+      background-size: cover !important;
+      background-position: right !important;
+    }
   }
 }
 
