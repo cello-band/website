@@ -39,7 +39,7 @@ body {
   top: 0;
   height: 100vh;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .page-wrapper::after {
     background-size: cover !important;
     background-position: right !important;
