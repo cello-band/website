@@ -11,6 +11,7 @@
     <script src="dependencies/aos-master/dist/aos.js" charset="utf-8"></script>
     <script src="js/custom.js" charset="utf-8"></script>
 
+
     <link rel="stylesheet" href="dependencies/bootstrap-5.3.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="dependencies/aos-master/dist/aos.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -31,10 +32,10 @@
                 <!-- site menu/nav -->
                 <ul>
                     <li><a href="#about">Über uns</a></li>
-                    <li><a href="#">Repertoire</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Referenzen</a></li>
-                    <li><a href="#">Buchung</a></li>
+                    <li><a href="#repertoire">Repertoire</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#referenzen">Referenzen</a></li>
+                    <li><a href="#buchung">Buchung</a></li>
                 </ul>
 
                 <!-- nav-toggler for mobile version only -->
@@ -50,16 +51,34 @@
 
 
     <div class="container-fluid page-wrapper">
+        <!--        <div class="custom-sticker" data-aos-anchor="#repertoire" data-aos="flip-up">-->
+        <!--            <img src="img/cello-band-sticker_about.png">-->
+        <!--        </div>-->
+
+        <div class="sticker-container">
+            <div class="custom-sticker position-1" data-aos="zoom-out" data-aos-duration="400" data-aos-delay="400"
+                 data-aos-anchor="#about">
+                <img src="img/cello-band-sticker_about.png">
+            </div>
+            <div class="custom-sticker position-2" data-aos="zoom-out" data-aos-duration="400" data-aos-delay="400"
+                 data-aos-anchor="#news">
+                <img src="img/cello-band-sticker_media.png">
+            </div>
+            <div class="custom-sticker position-3" data-aos="zoom-out" data-aos-duration="400" data-aos-delay="400"
+                 data-aos-anchor="#repertoire">
+                <img src="img/cello-band-sticker_repertoire.png">
+            </div>
+        </div>
 
 
         <!--     -----------------------   Intro   ----------------------- -->
         <div id="intro" class="row vh-100 align-items-center">
-            <div class="col">
+            <div class="col-4">
             </div>
-            <div class="col px-5" data-aos="zoom-out-left" >
+            <div class="col-8 px-5" data-aos="zoom-out-left">
                 <h1 class="display-5 fw-bold lh-1 mb-3">Responsive <strong>left-aligned</strong> hero with image
                 </h1>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
                     world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                     responsive grid system, extensive prebuilt components, and
                     powerful JavaScript plugins.</p>
@@ -72,199 +91,241 @@
 
         <!--     -----------------------   About   ----------------------- -->
         <div id="about" class="row vh-100 align-items-center">
-            <div class="col">
+            <div class="col-4">
             </div>
-            <div class="col px-5" data-aos="zoom-out-left">
-                <h2 class="display-5 fw-bold lh-1 mb-3">Vita</h2>
-                <p class="lead">Die Cello.Band wurde im Frühjahr 2019 von vier Cellisten des KIT-Sinfonieorchesters in
-                    Karlsruhe gegründet. Erste Auftritte fanden im selben Jahr bei der Campus-Klassik-Bühne, dem
-                    Uni-Fest am
-                    KIT und dem Chaos Computer Club in Karlsruhe statt.
-                    2020 wurde die Besetzung um zwei weitere feste Mitglieder aus dem KIT-Sinfonieorchester ergänzt.
-                    Durch
-                    berufsbedingten Wegzug einiger Musiker erhielt das Ensemble im Herbst 2023 erneut Zuwachs, aktuell
-                    besteht die Cello.Band aus fünf CellistInnen, drei davon gehören zu den Gründungsmitgliedern.
-                    Seit Ihrem Bestehen erarbeitet sich die Cello.Band fortwährend ein umfangreiches und breit
-                    gefächertes
-                    Repertoire. Auf dem Programm stehen neben klassische Werke aller Epochen lateinamerikanische Tänze
-                    sowie
-                    Arrangements aus Bereichen der Film-, Rock- und Popmusik.
-                    Seit 2020 tritt die Cello.Band sowohl bei öffentlichen als auch bei diversen privaten
-                    Veranstaltungen,
-                    z.B. Hauskonzerten und Hochzeiten, im Karlsruher Raum auf. Dazu gehört unter anderem die regelmäßige
-                    Beteiligung an der musikalischen Gestaltung der Gottesdienste in der evangelischen Stadtkirche
-                    Karlsruhe. In den Sommermonaten verlagert das Ensemble seine musikalische Aktivität gerne auf die
-                    Straße
-                    und ist bevorzugt vor dem Karlsruher Schloss oder dem Kammertheater Karlsruhe zu finden.
-                    Auf mehrtägigen Straßenmusik-Trips waren die Musiker aber auch bereits in Zürich, München und
-                    Baden-Baden zu hören.
-                    Ihren offiziellen Namen trägt die Cello.Band seit 2021.</p>
+            <div class="col-8 px-5" data-aos="zoom-out-left">
+                <h2 class="display-5 fw-bold lh-1 mb-3">Über uns</h2>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="true"
+                                    aria-controls="flush-collapseOne">
+                                Gründung
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show"
+                             data-bs-parent="#accordionFlushExample" style="">
+                            <div class="accordion-body">Die Cello.Band wurde im Frühjahr 2019 von vier Cellisten des
+                                KIT-Sinfonieorchesters in
+                                Karlsruhe gegründet. Erste Auftritte fanden im selben Jahr bei der Campus-Klassik-Bühne,
+                                dem
+                                Uni-Fest am KIT und dem Chaos Computer Club in Karlsruhe statt. 2020 wurde die Besetzung
+                                um
+                                zwei weitere feste Mitglieder aus dem KIT-Sinfonieorchester ergänzt.
+                                <br>
+                                <br>
+                                Durch berufsbedingten Wegzug einiger Musiker erhielt das Ensemble im Herbst 2023 erneut
+                                Zuwachs, aktuell besteht die Cello.Band aus fünf CellistInnen, drei davon gehören zu den
+                                Gründungsmitgliedern.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                Was wir spielen
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Seit Ihrem Bestehen erarbeitet sich die Cello.Band fortwährend
+                                ein umfangreiches und breit
+                                gefächertes Repertoire. Auf dem Programm stehen neben klassische Werke aller Epochen
+                                lateinamerikanische Tänze
+                                sowie Arrangements aus Bereichen der Film-, Rock- und Popmusik.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                Auftritte
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                             data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Seit 2020 tritt die Cello.Band sowohl bei öffentlichen als auch
+                                bei diversen privaten
+                                Veranstaltungen,
+                                z.B. Hauskonzerten und Hochzeiten, im Karlsruher Raum auf. Dazu gehört unter anderem die
+                                regelmäßige
+                                Beteiligung an der musikalischen Gestaltung der Gottesdienste in der evangelischen
+                                Stadtkirche
+                                Karlsruhe. In den Sommermonaten verlagert das Ensemble seine musikalische Aktivität
+                                gerne auf die
+                                Straße
+                                und ist bevorzugt vor dem Karlsruher Schloss oder dem Kammertheater Karlsruhe zu finden.
+                                Auf mehrtägigen Straßenmusik-Trips waren die Musiker aber auch bereits in Zürich,
+                                München und
+                                Baden-Baden zu hören.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--                <div class="fact-label">Ihren offiziellen Namen trägt die Cello.Band seit 2021.</div>-->
             </div>
         </div>
 
 
         <!--     -----------------------   Repertoire   ----------------------- -->
         <div id="repertoire" class="row vh-100 align-items-center">
-            <div class="col">
+            <div class="col-4">
             </div>
-            <div class="col px-5" data-aos="zoom-out-left">
-                <h2 class="display-5 fw-bold lh-1 mb-3">Vita</h2>
-                <p class="lead">Die Cello.Band wurde im Frühjahr 2019</p>
-                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                    <div class="col d-flex align-items-start">
-                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                            <i class="bi-alarm"></i>
-                        </div>
-                        <div>
-                            <h3>Featured title</h3>
-                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                                sentence and probably just keep going until we run out of words.</p>
-                            <a href="#" class="btn btn-primary">
-                                Primary button
-                            </a>
-                        </div>
+            <div class="col-8 px-5" data-aos="zoom-out-left">
+                <h2 class="display-5 fw-bold lh-1 mb-3">Repertoire</h2>
+                <p>Die Cello.Band wurde im Frühjahr 2019</p>
+                <div id="carouselExampleIndicatorsf" class="carousel slide d-flex">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1">Rock <i
+                                class="bi bi-arrow-right"></i></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="1"
+                                aria-label="Slide 2">Pop<i class="bi bi-arrow-right"></i></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="2"
+                                aria-label="Slide 3">Klassik <i class="bi bi-arrow-right"></i></button>
                     </div>
-                    <div class="col d-flex align-items-start">
-                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                            <i class="bi-alarm"></i>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">
+
                         </div>
-                        <div>
-                            <h3>Featured title</h3>
-                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                                sentence and probably just keep going until we run out of words.</p>
-                            <a href="#" class="btn btn-primary">
-                                Primary button
-                            </a>
+                        <div class="carousel-item">
+                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">
+
                         </div>
-                    </div>
-                    <div class="col d-flex align-items-start">
-                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
-                            <i class="bi-alarm"></i>
-                        </div>
-                        <div>
-                            <h3>Featured title</h3>
-                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
-                                sentence and probably just keep going until we run out of words.</p>
-                            <a href="#" class="btn btn-primary">
-                                Primary button
-                            </a>
+                        <div class="carousel-item">
+                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">
+
                         </div>
                     </div>
                 </div>
+                <!--                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">-->
+                <!--                    <div class="col d-flex align-items-start">-->
+                <!--                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
+                <!--                            <i class="bi-alarm"></i>-->
+                <!--                        </div>-->
+                <!--                        <div>-->
+                <!--                            <h3>Featured title</h3>-->
+                <!--                            asd-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="col d-flex align-items-start">-->
+                <!--                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
+                <!--                            <i class="bi-alarm"></i>-->
+                <!--                        </div>-->
+                <!--                        <div>-->
+                <!--                            <h3>Featured title</h3>-->
+                <!--                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with-->
+                <!--                                another-->
+                <!--                                sentence and probably just keep going until we run out of words.</p>-->
+                <!--                            <a href="#" class="btn btn-primary">-->
+                <!--                                Primary button-->
+                <!--                            </a>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                    <div class="col d-flex align-items-start">-->
+                <!--                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
+                <!--                            <i class="bi-alarm"></i>-->
+                <!--                        </div>-->
+                <!--                        <div>-->
+                <!--                            <h3>Featured title</h3>-->
+                <!--                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with-->
+                <!--                                another-->
+                <!--                                sentence and probably just keep going until we run out of words.</p>-->
+                <!--                            <a href="#" class="btn btn-primary">-->
+                <!--                                Primary button-->
+                <!--                            </a>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
             </div>
         </div>
 
 
         <!--     -----------------------   News   ----------------------- -->
         <div id="news" class="row vh-100 align-items-center">
-            <div class="col">
+            <div class="col-4">
             </div>
-            <div class="col px-5" data-aos="zoom-out-left">
-                <h2 class="display-5 fw-bold lh-1 mb-3">News
-                </h2>
-                <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the
+            <div class="col-8 px-5" data-aos="zoom-out-left">
+                <h2 class="display-5 fw-bold lh-1 mb-3">News</h2>
+                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
                     world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                     responsive grid system, extensive prebuilt components, and
                     powerful JavaScript plugins.</p>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="videos/pink panther.mp4" allowfullscreen
-                                        width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img"
-                                        aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                                        focusable="false"></iframe>
-                            </div>
-                            <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg> -->
-
-                            <div class="card-body">
-                                <p class="card-text">Pink Panther während einer Vernissage</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
-                                        <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
-                                    </div>
-                                    <small class="text-muted">Numbers of Likes</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                 preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect>
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                                 preserveAspectRatio="xMidYMid slice" focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect>
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
-
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsmodal1">sda</button>-->
+                <!--                Content will be injected with JS-->
+                <div id="news-container"></div>
             </div>
         </div>
 
     </div>
 
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">
-        <div class="item" data-aos="fade-up">1</div>
-        <div class="item" data-aos="fade-down">2</div>
-        <div class="item" data-aos="fade-right">3</div>
-        <div class="item" data-aos="zoom-out-left">4</div>
+    <!--    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center">-->
+    <!--        <div class="item" data-aos="fade-up">1</div>-->
+    <!--        <div class="item" data-aos="fade-down">2</div>-->
+    <!--        <div class="item" data-aos="fade-right">3</div>-->
+    <!--        <div class="item" data-aos="zoom-out-left">4</div>-->
 
-        <div class="item" data-aos="zoom-in">5</div>
-        <div class="item" data-aos="zoom-out">6</div>
+    <!--        <div class="item" data-aos="zoom-in">5</div>-->
+    <!--        <div class="item" data-aos="zoom-out">6</div>-->
 
-        <div class="item" data-aos="slide-up">7</div>
+    <!--        <div class="item" data-aos="slide-up">7</div>-->
 
-        <div class="item" data-aos="flip-up">8</div>
-        <div class="item" data-aos="flip-down">9</div>
-        <div class="item" data-aos="flip-right">10</div>
-        <div class="item" data-aos="flip-left">11</div>
+    <!--        <div class="item" data-aos="flip-up">8</div>-->
+    <!--        <div class="item" data-aos="flip-down">9</div>-->
+    <!--        <div class="item" data-aos="flip-right">10</div>-->
+    <!--        <div class="item" data-aos="flip-left">11</div>-->
 
+    <!--    </div>-->
+    <!-- Modal -->
+    <div id="modal-insert-container"></div>
+    <!--        <div class="modal fade" id="newsmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
+    <!--             aria-hidden="true">-->
+    <!--            <div class="modal-dialog" role="document">-->
+    <!--                <div class="modal-content">-->
+    <!--                    <div class="modal-header">-->
+    <!--                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+    <!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+    <!--                            <span aria-hidden="true">&times;</span>-->
+    <!--                        </button>-->
+    <!--                    </div>-->
+    <!--                    <div class="modal-body">-->
+    <!--                        ...-->
+    <!--                    </div>-->
+    <!--                    <div class="modal-footer">-->
+    <!--                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+    <!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <div class="modal fade" id="newsmodal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
 
 
 </main>
@@ -272,7 +333,7 @@
 <script>
     console.log('init')
     AOS.init({
-        duration: 1000,
+        duration: 600,
     })
 </script>
 </body>

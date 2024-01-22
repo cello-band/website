@@ -12,10 +12,6 @@
   font-size: 3em;
 }
 
-body {
-  font-family: "Montserrat Alternates", sans-serif;
-}
-
 .page-wrapper::before {
   content: "";
   height: 100vh;
@@ -27,27 +23,14 @@ body {
   background: rgb(205, 202, 201);
   background: linear-gradient(270deg, rgb(205, 202, 201) 0%, rgb(255, 255, 255) 100%);
 }
-.page-wrapper::after {
-  content: "";
-  background-image: url(../img/cello-kasten-single.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: fixed;
-  left: 0;
-  /* display: block; */
-  width: 50%;
-  top: 0;
-  height: 100vh;
-}
-@media screen and (max-width: 1024px) {
-  .page-wrapper::after {
-    background-size: cover !important;
-    background-position: right !important;
-  }
-}
 
 .font-white {
   color: white;
+}
+
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: calc(13px + 0.390625vw);
 }
 
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
@@ -226,6 +209,138 @@ header .link-secondary:hover, header .link-secondary:focus, header .link-dark:ho
 
 .bg-light {
   background-color: #e5e1dc !important;
+}
+
+.carousel-indicators {
+  position: unset;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+}
+
+.carousel-indicators [data-bs-target] {
+  text-indent: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+  border-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-indicators [data-bs-target].active {
+  color: darkgoldenrod;
+}
+
+.carousel-inner img {
+  max-height: 400px;
+  max-width: 100%;
+  padding: 1em;
+  margin: auto;
+}
+
+.accordion {
+  --bs-accordion-bg: transparent;
+}
+.accordion .accordion-button:not(.collapsed) {
+  color: #a84a10;
+  background-color: transparent;
+  font-weight: bold;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+.accordion .accordion-button:focus, .accordion .accordion-button:active, .accordion .accordion-button:visited {
+  border: 0;
+}
+
+.sticker-container {
+  position: fixed;
+  display: block;
+  width: 50%;
+  height: 100vh;
+  left: -100px;
+}
+.sticker-container::after {
+  content: "";
+  background-image: url(../img/cello-kasten-single.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  position: fixed;
+  left: -175px;
+  /* display: block; */
+  width: 50%;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+@media screen and (max-width: 1024px) {
+  .sticker-container::after {
+    background-size: cover !important;
+    left: -85px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sticker-container::after {
+    background-size: cover !important;
+    left: -30px !important;
+  }
+}
+
+.custom-sticker {
+  width: 56px;
+  position: absolute;
+}
+.custom-sticker img {
+  opacity: 0.8;
+  width: 100%;
+  -webkit-filter: drop-shadow(-1px 1px 1px #808080);
+  filter: drop-shadow(-1px 1px 1px #808080);
+}
+
+/* desktop breakpoint start */
+@media (min-width: 1025px) {
+  .custom-sticker {
+    width: 56px;
+  }
+  .custom-sticker.position-1 {
+    top: 90px;
+    right: 275px;
+  }
+  .custom-sticker.position-2 {
+    top: 524px;
+    right: 213px;
+  }
+  .custom-sticker.position-3 {
+    top: 403px;
+    right: 342px;
+  }
+}
+/* mobile breakpoint start */
+@media screen and (max-width: 1024px) {
+  .custom-sticker {
+    width: 90px;
+  }
+  .custom-sticker.position-1 {
+    top: 128px;
+    right: 301px;
+  }
+  .custom-sticker.position-2 {
+    top: 824px;
+    right: 203px;
+  }
+  .custom-sticker.position-3 {
+    top: 665px;
+    right: 238px;
+  }
+}
+.news-icon {
+  top: calc(50% - 17px);
+  left: 50%;
+  font-size: 25px;
 }
 
 /*# sourceMappingURL=custom.css.map */
