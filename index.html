@@ -9,6 +9,7 @@
     <script src="dependencies/jquery-3.7.1.slim.min.js" charset="utf-8"></script>
     <script src="dependencies/lodash.min.js" charset="utf-8"></script>
     <script src="dependencies/aos-master/dist/aos.js" charset="utf-8"></script>
+    <script src="dependencies/masonry.pkgd.min.js" async></script>
     <script src="js/custom.js" charset="utf-8"></script>
 
 
@@ -27,14 +28,14 @@
         <div class="container">
             <nav class="site-navbar">
                 <!-- site logo -->
-                <a href="#home" class="site-logo">logo</a>
+                <!--                <a href="#home" class="site-logo"><img src="img/logo-placeholder.png" style="max-height: 70px;"></a>-->
 
                 <!-- site menu/nav -->
                 <ul>
                     <li><a href="#about">Über uns</a></li>
                     <li><a href="#repertoire">Repertoire</a></li>
                     <li><a href="#news">News</a></li>
-                    <li><a href="#referenzen">Referenzen</a></li>
+                    <!--                    <li><a href="#referenzen">Referenzen</a></li>-->
                     <li><a href="#buchung">Buchung</a></li>
                 </ul>
 
@@ -76,32 +77,33 @@
             <div class="col-4">
             </div>
             <div class="col-8 px-5" data-aos="zoom-out-left">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Responsive <strong>left-aligned</strong> hero with image
+                <h1 class="display-5 fw-bold lh-1 mb-3">Willkommen bei der Cello Band </br> Klassik <strong>&</strong>
+                    Cross-Over
                 </h1>
                 <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
                     world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                     responsive grid system, extensive prebuilt components, and
                     powerful JavaScript plugins.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 mb-5">Primary</button>
+                    <a type="button" class="btn btn-primary btn-lg px-4 me-md-2 mb-5" href="#about">Mehr erfahren</a>
                 </div>
             </div>
         </div>
 
 
         <!--     -----------------------   About   ----------------------- -->
-        <div id="about" class="row vh-100 align-items-center">
+        <div id="about" class="row dark-section l-margin-y-150 py-5 align-items-center">
             <div class="col-4">
             </div>
             <div class="col-8 px-5" data-aos="zoom-out-left">
                 <h2 class="display-5 fw-bold lh-1 mb-3">Über uns</h2>
                 <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseOne" aria-expanded="true"
                                     aria-controls="flush-collapseOne">
-                                Gründung
+                                <i class="bi-flag"></i> Gründung
                             </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse show"
@@ -121,12 +123,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item mb-2">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                     aria-controls="flush-collapseTwo">
-                                Was wir spielen
+                                <i class="bi-music-note-list"></i> Was wir spielen
                             </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse"
@@ -144,7 +146,7 @@
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseThree" aria-expanded="false"
                                     aria-controls="flush-collapseThree">
-                                Auftritte
+                                <i class="bi-calendar2-heart"></i> Auftritte
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse"
@@ -156,7 +158,8 @@
                                 regelmäßige
                                 Beteiligung an der musikalischen Gestaltung der Gottesdienste in der evangelischen
                                 Stadtkirche
-                                Karlsruhe. In den Sommermonaten verlagert das Ensemble seine musikalische Aktivität
+                                Karlsruhe.<br>
+                                <br> In den Sommermonaten verlagert das Ensemble seine musikalische Aktivität
                                 gerne auf die
                                 Straße
                                 und ist bevorzugt vor dem Karlsruher Schloss oder dem Kammertheater Karlsruhe zu finden.
@@ -174,82 +177,123 @@
 
 
         <!--     -----------------------   Repertoire   ----------------------- -->
-        <div id="repertoire" class="row vh-100 align-items-center">
+        <div id="repertoire" class="row l-margin-y-150 py-5 align-items-center">
             <div class="col-4">
             </div>
             <div class="col-8 px-5" data-aos="zoom-out-left">
                 <h2 class="display-5 fw-bold lh-1 mb-3">Repertoire</h2>
-                <p>Die Cello.Band wurde im Frühjahr 2019</p>
-                <div id="carouselExampleIndicatorsf" class="carousel slide d-flex">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1">Rock <i
-                                class="bi bi-arrow-right"></i></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="1"
-                                aria-label="Slide 2">Pop<i class="bi bi-arrow-right"></i></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="2"
-                                aria-label="Slide 3">Klassik <i class="bi bi-arrow-right"></i></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">
+                <p>Von klassischen Meisterwerken bis zu modernen Klängen - unsere musikalische Reise vereint
+                    Leidenschaft und Virtuosität.</p>
 
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">
 
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">
-
+                <div class="row mt-5" data-masonry="{&quot;percentPosition&quot;: true }"
+                     style="position: relative; height: 714px;">
+                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 0%; top: 0px;">
+                        <div class="card">
+                            <div class="card-img-top" style="background-image: url('img/cello-band-1.jpg');"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Klassik</h3>
+                                <p class="card-text">This is a longer card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
+                        <div class="card text-bg-third text-white text-center p-3">
+                            <figure class="mb-0">
+                                <blockquote class="blockquote">
+                                    <p>A well-known quote, contained in a blockquote element.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0 text-white">
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
+                        <div class="card">
+                            <div class="card-img-top" style="background-image: url('img/cello-band-3.jpg');"></div>
+                            <div class="card-body">
+                                <h3 class="card-title">Filmmusik</h3>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional content.</p>
+                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 33.3333%; top: 171px;">
+                        <div class="card text-bg-third text-white text-center p-3">
+                            <figure class="mb-0">
+                                <blockquote class="blockquote">
+                                    <p>A well-known quote, contained in a blockquote element.</p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer mb-0 text-white">
+                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
+                        <div class="card">
+                            <div class="card-img-top" style="background-image: url('img/cello-band-5.jpg');">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Tango</h3>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional content.</p>
+                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 mb-4" style="position: absolute; left: 66.6667%; top: 0px;">
+                        <div class="card">
+                            <div class="card-img-top" style="background-image: url('img/cello-band-4.jpg');">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title">Rock</h3>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to
+                                    additional content.</p>
+                                <p class="card-text"><a href="#"><small>Demo anhören</small></a></p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <!--                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">-->
-                <!--                    <div class="col d-flex align-items-start">-->
-                <!--                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
-                <!--                            <i class="bi-alarm"></i>-->
-                <!--                        </div>-->
-                <!--                        <div>-->
-                <!--                            <h3>Featured title</h3>-->
-                <!--                            asd-->
-                <!--                        </div>-->
+
+
+                <!--                <div id="carouselExampleIndicatorsf" class="carousel slide d-flex">-->
+                <!--                    <div class="carousel-indicators">-->
+                <!--                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="0"-->
+                <!--                                class="active" aria-current="true" aria-label="Slide 1">Rock <i-->
+                <!--                                class="bi bi-arrow-right"></i></button>-->
+                <!--                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="1"-->
+                <!--                                aria-label="Slide 2">Pop<i class="bi bi-arrow-right"></i></button>-->
+                <!--                        <button type="button" data-bs-target="#carouselExampleIndicatorsf" data-bs-slide-to="2"-->
+                <!--                                aria-label="Slide 3">Klassik <i class="bi bi-arrow-right"></i></button>-->
                 <!--                    </div>-->
-                <!--                    <div class="col d-flex align-items-start">-->
-                <!--                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
-                <!--                            <i class="bi-alarm"></i>-->
+                <!--                    <div class="carousel-inner">-->
+                <!--                        <div class="carousel-item active">-->
+                <!--                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">-->
+
                 <!--                        </div>-->
-                <!--                        <div>-->
-                <!--                            <h3>Featured title</h3>-->
-                <!--                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with-->
-                <!--                                another-->
-                <!--                                sentence and probably just keep going until we run out of words.</p>-->
-                <!--                            <a href="#" class="btn btn-primary">-->
-                <!--                                Primary button-->
-                <!--                            </a>-->
+                <!--                        <div class="carousel-item">-->
+                <!--                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">-->
+
                 <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                    <div class="col d-flex align-items-start">-->
-                <!--                        <div class="icon-square bg-light text-dark flex-shrink-0 me-3">-->
-                <!--                            <i class="bi-alarm"></i>-->
-                <!--                        </div>-->
-                <!--                        <div>-->
-                <!--                            <h3>Featured title</h3>-->
-                <!--                            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with-->
-                <!--                                another-->
-                <!--                                sentence and probably just keep going until we run out of words.</p>-->
-                <!--                            <a href="#" class="btn btn-primary">-->
-                <!--                                Primary button-->
-                <!--                            </a>-->
+                <!--                        <div class="carousel-item">-->
+                <!--                            <img src="https://codingyaar.com/wp-content/uploads/donut.jpg" class="d-block" alt="">-->
+
                 <!--                        </div>-->
                 <!--                    </div>-->
                 <!--                </div>-->
+
             </div>
         </div>
 
 
         <!--     -----------------------   News   ----------------------- -->
-        <div id="news" class="row vh-100 align-items-center">
+        <div id="news" class="row l-margin-y-150 py-5 align-items-center">
             <div class="col-4">
             </div>
             <div class="col-8 px-5" data-aos="zoom-out-left">
@@ -258,12 +302,36 @@
                     world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                     responsive grid system, extensive prebuilt components, and
                     powerful JavaScript plugins.</p>
-<!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsmodal1">sda</button>-->
+                <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsmodal1">sda</button>-->
                 <!--                Content will be injected with JS-->
                 <div id="news-container"></div>
             </div>
         </div>
 
+        <!--     -----------------------   Buchung   ----------------------- -->
+        <div id="buchung" class="row blue-section l-margin-y-150 py-5 align-items-center">
+            <div class="col-4">
+            </div>
+            <div class="col-8 px-5" data-aos="zoom-out-left">
+                <h2 class="display-5 fw-bold lh-1 mb-3">Buchung</h2>
+                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the
+                    world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
+                    responsive grid system, extensive prebuilt components, and
+                    powerful JavaScript plugins.</p>
+                <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newsmodal1">sda</button>-->
+                <!--                Content will be injected with JS-->
+                <div id="news-container"></div>
+            </div>
+        </div>
+
+
+        <footer class="blue-section d-flex flex-wrap justify-content-end align-items-center py-3 my-4">
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">© 2024 Cello Band</li>
+                <li class="ms-3"><a href="#"><i class="bi-facebook"></i></a></li>
+                <li class="ms-3"><a href="#"><i class="bi-instagram"></i></a></li>
+            </ul>
+        </footer>
     </div>
 
 
@@ -286,27 +354,8 @@
     <!--    </div>-->
     <!-- Modal -->
     <div id="modal-insert-container"></div>
-    <!--        <div class="modal fade" id="newsmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"-->
-    <!--             aria-hidden="true">-->
-    <!--            <div class="modal-dialog" role="document">-->
-    <!--                <div class="modal-content">-->
-    <!--                    <div class="modal-header">-->
-    <!--                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
-    <!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-    <!--                            <span aria-hidden="true">&times;</span>-->
-    <!--                        </button>-->
-    <!--                    </div>-->
-    <!--                    <div class="modal-body">-->
-    <!--                        ...-->
-    <!--                    </div>-->
-    <!--                    <div class="modal-footer">-->
-    <!--                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
-    <!--                        <button type="button" class="btn btn-primary">Save changes</button>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <div class="modal fade" id="newsmodal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

@@ -1,6 +1,43 @@
 @charset "UTF-8";
 
 
+// ---------------- Colors ----------------
+
+$primary: #a84a10;
+$third: #bdaf79;
+
+.bg-primary, .text-bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-third, .text-bg-third {
+  background-color: $third !important;
+}
+
+
+// ---------------- Margin ----------------
+.l-margin-y-150 {
+  margin: 150px 0;
+}
+
+
+.dark-section{
+  -webkit-box-shadow:0px 0px 135px 115px rgba(216,214,214,0.9);
+  -moz-box-shadow: 0px 0px 135px 115px rgba(216,214,214,0.9);
+  box-shadow: 0px 0px 135px 115px rgba(216,214,214,0.9);
+  background: rgba(216,214,214,0.9);
+}
+
+.blue-section{
+  -webkit-box-shadow:0px 0px 91px 115px rgba(#abc1d5,0.9);
+  -moz-box-shadow: 0px 0px 91px 115px rgba(#abc1d5,0.9);
+  box-shadow: 0px 0px 91px 115px rgba(#abc1d5,0.9);
+  background: rgba(#abc1d5,0.9);
+
+  color: white!important;
+}
+
+
 .item {
   width: 200px;
   height: 200px;
@@ -67,28 +104,33 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: calc(13px + 0.390625vw)
+  font-family: "Poppins", sans-serif;
+  font-size: calc(13px + 0.390625vw);
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", sans-serif;
+  //font-family: "Abril Fatface", serif;
   & strong {
-    font-family: 'Pacifico', cursive;
+    font-family: "Abril Fatface", serif;
+    color: $primary;
+    //font-family: 'Pacifico', cursive;
   }
 }
 
-// ---------------- Colors ----------------
+a{
+  text-decoration: none;
+  color: $primary;
 
-$primary: #a84a10;
-
-.bg-primary {
-  background-color: $primary !important;
+  &:hover{
+    color: $primary;
+  }
 }
-
 
 // ---------------- Navigation ----------------
 
@@ -96,7 +138,7 @@ $primary: #a84a10;
 .navbar-area {
   z-index: 1;
   background: rgba(255, 255, 255, .6);
-  border-bottom: 2px solid white;
+  //border-bottom: 2px solid white;
 }
 
 .site-navbar {
@@ -237,8 +279,9 @@ a.site-logo {
 
 
 header {
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.8);
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
 
   & .link-secondary:hover,
   & .link-secondary:focus,
@@ -250,12 +293,18 @@ header {
 
 
 /* Buttons */
+
+.btn {
+  border-radius: 40px;
+  //box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
 .btn-primary {
   background-color: #a84a10;
   border-color: #a84a10;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
   background-color: #99430d;
   border-color: #99430d;
 }
@@ -312,10 +361,16 @@ header {
 }
 
 
-
 // ---------------- Accordion ----------------
 .accordion {
   --bs-accordion-bg: transparent;
+
+  .accordion-button {
+    i {
+      margin-right: 10px;
+      color: $primary;
+    }
+  }
 
   .accordion-button:not(.collapsed) {
     color: $primary;
@@ -327,11 +382,25 @@ header {
   .accordion-button:focus, .accordion-button:active, .accordion-button:visited {
     border: 0;
   }
+
+  .accordion-header {
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: white;
+    border-radius: 40px;
+  }
+
+  .accordion-body {
+    padding: 45px;
+  }
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+  }
 }
 
-
-
-
+.accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+  box-shadow: none;
+}
 
 
 // ---------------- Sticker ----------------
@@ -440,12 +509,40 @@ header {
 }
 
 
+.card {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border: 0px;
+  border-radius: 20px !important;
+  overflow: hidden;
+
+  .card-img-top {
+    height: 150px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+
+    img {
+      width: 100%;
+    }
+  }
+}
 
 
-
-
-.news-icon{
+.news-icon {
   top: calc(50% - 17px);
   left: 50%;
   font-size: 25px;
+}
+
+
+
+footer{
+  z-index: -1;
+  color: white;
+  position: relative;
+
+  a{
+    color: white;
+    cursor: pointer;
+  }
 }
