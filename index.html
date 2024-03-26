@@ -10,8 +10,8 @@
     <script src="dependencies/lodash.min.js" charset="utf-8"></script>
     <script src="dependencies/aos-master/dist/aos.js" charset="utf-8"></script>
     <script src="dependencies/masonry.pkgd.min.js" async></script>
+    <script src="dependencies/smooth-scrollbar.js"></script>
     <script src="js/custom.js" charset="utf-8"></script>
-
 
     <link rel="stylesheet" href="dependencies/bootstrap-5.3.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="dependencies/aos-master/dist/aos.css">
@@ -86,16 +86,19 @@
                     world’s most popular front-end open source toolkit, featuring Sass variables and mixins,
                     responsive grid system, extensive prebuilt components, and
                     powerful JavaScript plugins.</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-<!--                    <a type="button" class="btn btn-primary btn-lg px-4 me-md-2 mb-5" href="#about">Mehr erfahren</a>-->
-                    <a type="button" class="btn btn-white btn-lg px-4 me-md-2 mt-2" href="#about">Mehr erfahren</a>
-                </div>
+                <a class="cta cta-2" href="#about">
+                    <span>Mehr erfahren</span>
+                    <svg width="15px" height="10px" viewBox="0 0 13 10">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </a>
             </div>
         </div>
 
 
         <!--     -----------------------   About   ----------------------- -->
-        <div id="about" class="row dark-section l-margin-y-150 py-5 align-items-center">
+        <div id="about" class="row third-section l-margin-y-150 py-5 align-items-center">
             <div class="col-md-4 col-sm-12" >
             </div>
             <div class="px-5 col-md-8 col-sm-12"  data-aos="zoom-out-left">
@@ -180,7 +183,7 @@
 
 
         <!--     -----------------------   Repertoire   ----------------------- -->
-        <div id="repertoire" class="row l-margin-y-150 py-5 align-items-center">
+        <div id="repertoire" class="row secondary-section l-margin-y-150 py-5 align-items-center">
             <div class="col-md-4 col-sm-12" >
             </div>
             <div class="px-5 col-md-8 col-sm-12"  data-aos="zoom-out-left">
@@ -292,7 +295,7 @@
 
 
         <!--     -----------------------   News   ----------------------- -->
-        <div id="news" class="row l-margin-y-150 py-5 align-items-center">
+        <div id="news" class="row forth-section l-margin-y-150 py-5">
             <div class="col-md-4 col-sm-12" >
             </div>
             <div class="px-5 col-md-8 col-sm-12"  data-aos="zoom-out-left">
@@ -308,7 +311,7 @@
         </div>
 
         <!--     -----------------------   Buchung   ----------------------- -->
-        <div id="buchung" class="row blue-section mb-0 py-5 align-items-center">
+        <div id="buchung" class="row primary-section mb-0 py-5 align-items-center">
             <div class="col-md-4 col-sm-12">
             </div>
             <div class="col-md-8 px-5 col-sm-12" data-aos="zoom-out-left">
@@ -388,6 +391,17 @@
     AOS.init({
         duration: 600,
     })
+
+    const options = {
+        damping: 0.1,
+        thumbMinSize: 20,
+        renderByPixels: !('ontouchstart' in document),
+        alwaysShowTracks: false,
+        continuousScrolling: true,
+    };
+    var Scrollbar = window.Scrollbar;
+
+    Scrollbar.initAll(document.querySelector('#my-scrollbar'), options);
 </script>
 </body>
 
