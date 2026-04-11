@@ -28,6 +28,43 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
+
+      - name: Prerender pages
+        run: |
+          node .output/server/index.mjs &
+          SERVER_PID=$!
+          node -e "
+            const fs = require('fs');
+            const pages = ['/', '/impressum'];
+            async function tryFetch(url, attempts) {
+              try {
+                const res = await fetch('http://localhost:3000' + url);
+                if (!res.ok) throw new Error('Status ' + res.status);
+                return await res.text();
+              } catch(e) {
+                if (attempts > 0) {
+                  await new Promise(r => setTimeout(r, 1000));
+                  return tryFetch(url, attempts - 1);
+                }
+                throw e;
+              }
+            }
+            async function main() {
+              for (const page of pages) {
+                const html = await tryFetch(page, 30);
+                const dir = '.output/public' + page;
+                fs.mkdirSync(dir, { recursive: true });
+                fs.writeFileSync(dir + '/index.html', html);
+                console.log('Prerendered', page, '(' + html.length + ' bytes)');
+              }
+            }
+            main().catch(e => { console.error(e); process.exit(1); });
+          "
+          kill $SERVER_PID
+
+      - run: cp .output/public/index.html .output/public/404.html
+
+      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: .output/public
