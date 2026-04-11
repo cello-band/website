@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { logo } from "#media";
+import { AnnouncementBar } from "./AnnouncementBar";
 
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "Über uns" },
-  { href: "#repertoire", label: "Repertoire" },
-  { href: "#news", label: "News" },
   { href: "#booking", label: "Buchung" },
 ];
 
@@ -27,6 +26,7 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
+      {!scrolled && <AnnouncementBar />}
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2">
           <img

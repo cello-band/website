@@ -2,7 +2,7 @@ const newsItems = [
   {
     date: "2024",
     title: "Neue Besetzung",
-    text: "Die Cello.Band besteht aktuell aus fünf CellistInnen. Nach dem Zuwachs im Herbst 2023 proben wir nun an neuem Repertoire und bereiten kommende Auftritte vor.",
+    text: "Die Cello.Band besteht aktuell aus acht CellistInnen. Nach dem Zuwachs proben wir nun an neuem Repertoire und bereiten kommende Auftritte vor.",
   },
   {
     date: "2023",

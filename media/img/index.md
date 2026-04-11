@@ -9,7 +9,9 @@ The original assets are kept as-is.
 	![7I5A5919-web.jpg](./7I5A5919-web.jpg)
 - 7I5A5920.jpg: A second group portrait in the same colonnade setting, framed a little tighter and more centered on the ensemble.
 	![7I5A5920.jpg](./7I5A5920.jpg)
-- cello-band-foto.png: A cutout-style graphic of the five-person ensemble, separated from the original background for compositing or hero use.
+- cello-band-complete.png: A group photo of the full eight-person ensemble in matching grey t-shirts, posed with their cellos against a white background. One member holds a cello overhead. Used as the current hero image.
+	![cello-band-complete.png](./cello-band-complete.png)
+- cello-band-foto.png: A cutout-style graphic of the former five-person ensemble, separated from the original background for compositing or hero use.
 	![cello-band-foto.png](./cello-band-foto.png)
 
 ## Performance Photos

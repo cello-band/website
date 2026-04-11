@@ -1,4 +1,4 @@
-import { bandFoto } from "#media";
+import { bandComplete } from "#media";
 
 export function Hero() {
   return (
@@ -10,8 +10,8 @@ export function Hero() {
         {/* Ensemble photo */}
         <div className="relative flex justify-center">
           <img
-            src={bandFoto}
-            alt="Die Cello.Band – Fünf CellistInnen"
+            src={bandComplete}
+            alt="Die Cello.Band – Acht CellistInnen"
             className="w-full max-w-4xl drop-shadow-2xl animate-fade-in-up"
           />
         </div>
@@ -19,12 +19,11 @@ export function Hero() {
         {/* Text */}
         <div className="text-center space-y-6 max-w-2xl">
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-cello-dark">
-            Die Cello Band
+            Die Cello.Band
             <br />
-            <span className="text-cello-dark">–&nbsp;</span>
+            <span className="block h-4 md:h-6" aria-hidden="true" />
             <span className="text-cello-orange italic">Cello</span>
-            <br />
-            <span className="text-cello-dark">neu erleben</span>
+            <span className="text-cello-dark"> neu erleben</span>
           </h1>
 
           <p className="text-lg text-cello-muted max-w-xl leading-relaxed">
