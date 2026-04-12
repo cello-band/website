@@ -7,18 +7,20 @@ import { Music } from "#/components/Music";
 import { Repertoire } from "#/components/Repertoire";
 import { Booking } from "#/components/Booking";
 import { Footer } from "#/components/Footer";
+import { ExpandCarouselsProvider } from "#/components/ImageCycler";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
   validateSearch: (search: Record<string, unknown>) => ({
     ...("preview" in search ? { preview: true as const } : {}),
+    ...("expandCarousels" in search ? { expandCarousels: true as const } : {}),
   }),
 });
 
 function HomePage() {
-  const { preview } = useSearch({ from: "/" }) as { preview?: true };
+  const { preview, expandCarousels } = useSearch({ from: "/" }) as { preview?: true; expandCarousels?: true };
   return (
-    <>
+    <ExpandCarouselsProvider value={!!expandCarousels}>
       <Header />
       <main>
         <Hero />
@@ -29,6 +31,6 @@ function HomePage() {
         <Booking />
       </main>
       <Footer />
-    </>
+    </ExpandCarouselsProvider>
   );
 }

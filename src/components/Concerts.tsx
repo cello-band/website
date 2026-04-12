@@ -143,7 +143,7 @@ export function Concerts() {
             </h3>
 
             {/* Grid timeline: [date] [line+dot] [content] */}
-            <div className="grid grid-cols-[1fr_auto_1fr] sm:grid-cols-[4rem_auto_1fr] gap-x-0 items-start">
+            <div className="grid grid-cols-[0px_auto_1fr] sm:grid-cols-[4rem_auto_1fr] gap-x-0 items-start">
               {visiblePast.map((concert, i) => {
                 const summary = programSummary(concert.program);
                 const year = new Date(concert.date).getFullYear();
@@ -159,8 +159,8 @@ export function Concerts() {
                         {/* Empty left cell */}
                         <div />
                         {/* Line segment */}
-                        <div className="flex justify-center">
-                          <div className="w-px bg-cello-orange/20 h-5" />
+                        <div className="flex justify-center self-stretch">
+                          {i > 0 && <div className="w-px bg-cello-orange/20 h-full" />}
                         </div>
                         {/* Year label + fading line */}
                         <div className="flex items-center gap-3 py-2 pl-3">
@@ -172,24 +172,24 @@ export function Concerts() {
 
                     {/* Concert row */}
                     {/* Date cell — right-aligned */}
-                    <div className="hidden sm:flex justify-end items-start pt-[7px] pr-3">
-                      <span className="text-xs text-cello-muted whitespace-nowrap">
+                    <div className="hidden sm:flex justify-end items-start pt-px pr-3">
+                      <span className="text-xs text-cello-muted whitespace-nowrap leading-snug">
                         {new Date(concert.date).toLocaleDateString("de-DE", { day: "numeric", month: "short" }).replace(".", "")}
                       </span>
                     </div>
                     <div className="sm:hidden" />
 
                     {/* Dot + line segment cell */}
-                    <div className="flex flex-col items-center">
-                      <div className="w-px bg-cello-orange/20 h-2.5" />
-                      <div className="w-1.5 h-1.5 rounded-full bg-cello-orange/30 flex-shrink-0 group-hover:bg-cello-orange transition-colors" />
+                    <div className="flex flex-col items-center self-stretch">
+                      <div className="w-px bg-cello-orange/20 h-[7px]" />
+                      <div className="w-2 h-2 rounded-full bg-cello-orange/30 flex-shrink-0 group-hover:bg-cello-orange transition-colors" />
                       {(!isLast || canShowMore) && (
                         <div className="w-px bg-cello-orange/20 flex-1 min-h-2.5" />
                       )}
                     </div>
 
                     {/* Content cell */}
-                    <div className="pb-2 pl-3">
+                    <div className="pb-4 pl-3 min-w-0 pt-px">
                       <div className="sm:hidden text-[11px] text-cello-muted mb-0.5">
                         {formatDateShort(concert.date)}
                       </div>

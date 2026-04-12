@@ -1,4 +1,5 @@
 import flyerKleineKirche2026 from "#media/img/2026.04.15-flyer.png";
+import flyerNeckargemuend2026 from "#media/img/2026.10.18-flyer.jpg";
 
 export type ConcertKind =
   | "concert"
@@ -44,6 +45,7 @@ export const concerts: Concert[] = [
     venue: "Ökumenisches Kirchenzentrum Arche, Neckargemünd",
     kind: "concert",
     description: "Unser zweites Konzert in Neckargemünd — im Rahmen der Reihe Klangraumkonzerte.",
+    flyerUrl: flyerNeckargemuend2026,
   },
 
   // ──────────────────────────────────────
@@ -52,7 +54,7 @@ export const concerts: Concert[] = [
   {
     date: "2025-11-16",
     title: "Gottesdienst",
-    venue: "Kleine Kirche, Karlsruhe",
+    venue: "Ev. Stadtkirche, Karlsruhe",
     kind: "church",
     program: [
       "Edward Elgar – Nimrod",
@@ -88,7 +90,7 @@ export const concerts: Concert[] = [
   {
     date: "2025-04-27",
     title: "Gottesdienst",
-    venue: "Kleine Kirche, Karlsruhe",
+    venue: "Ev. Stadtkirche, Karlsruhe",
     kind: "church",
   },
 
@@ -107,10 +109,18 @@ export const concerts: Concert[] = [
     ],
   },
   {
+    date: "2024-11-25",
+    time: "17:00",
+    title: "KIT International Excellence Award",
+    venue: "KIT Campus Süd, Karlsruhe",
+    kind: "concert",
+    description: "Musikalische Umrahmung der Preisverleihung.",
+  },
+  {
     date: "2024-11-17",
     time: "18:00",
     title: "Konzert in Neckargemünd",
-    venue: "Gemeindesaal, Neckargemünd",
+    venue: "Ökumenisches Kirchenzentrum Arche, Neckargemünd",
     kind: "concert",
     description: "Unser erstes abendfüllendes Konzertprogramm mit Werken von der Barockzeit bis heute.",
     program: [
@@ -135,6 +145,12 @@ export const concerts: Concert[] = [
     title: "Straßenmusik Leipzig",
     venue: "Leipzig",
     kind: "streetmusic-tour",
+  },
+  {
+    date: "2024-04-14",
+    title: "Schützenfest Weingarten – Matinee",
+    venue: "Weingarten bei Karlsruhe",
+    kind: "festival",
   },
   {
     date: "2024-06-16",

@@ -41,10 +41,9 @@ export function AnnouncementBar() {
       className="block bg-gradient-to-r from-cello-orange to-cello-amber text-white text-center text-sm font-medium py-2.5 px-4 hover:brightness-110 transition-all duration-300"
     >
       <span className="inline-flex items-center gap-2 flex-wrap justify-center">
-        <span>
-          Konzert am {dateStr} · {next.venue}
-        </span>
-        <span className="font-bold">&middot; {countdown}</span>
+        <span className="whitespace-nowrap">Konzert am {dateStr}</span>
+        <span className="whitespace-nowrap">· {next.venue}</span>
+        <span className="whitespace-nowrap font-bold">· {countdown}</span>
         <span>→</span>
       </span>
     </a>

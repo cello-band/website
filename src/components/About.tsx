@@ -1,4 +1,4 @@
-import { bandPhoto1, bandCircle, photoHouseConcert, photoEarlyLineup, photoFormalHall, photoVillaRehearsal } from "#media";
+import { bandPhoto2, photoHouseConcert, photoEarlyLineup, photoVillaRehearsal, photoHilltopConcert } from "#media";
 import { ImageCycler } from "./ImageCycler";
 
 export function About() {
@@ -10,14 +10,11 @@ export function About() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <ImageCycler
-                images={[bandPhoto1, photoHouseConcert, photoEarlyLineup, photoFormalHall, photoVillaRehearsal]}
+                images={[photoHouseConcert, photoEarlyLineup, photoVillaRehearsal, bandPhoto2, photoHilltopConcert]}
                 alt="Die Cello.Band"
                 className="w-full h-auto"
                 interval={5000}
               />
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-40 h-40 rounded-full overflow-hidden shadow-xl border-4 border-white hidden lg:block">
-              <img src={bandCircle} alt="" className="w-full h-full object-cover" />
             </div>
           </div>
 

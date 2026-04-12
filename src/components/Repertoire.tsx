@@ -1,10 +1,8 @@
 import { useState, useMemo, useRef } from "react";
 import {
-  repertoire,
-  categoryLabels,
-  statusLabels,
-  type RepertoireCategory,
-  type RepertoireStatus,
+    repertoire,
+    categoryLabels, type RepertoireCategory,
+    type RepertoireStatus
 } from "#/repertoire";
 
 const categories = Object.keys(categoryLabels) as RepertoireCategory[];
@@ -94,7 +92,7 @@ export function Repertoire() {
             Repertoire
           </p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-4">
-            {repertoire.length}+ Stücke für Cello-Ensemble
+            100+ Stücke für Cello-Ensemble
           </h2>
           <p className="text-white/80 max-w-3xl mx-auto text-lg">
             Von Bach und Vivaldi über Piazzollas Tangos bis zu Star Wars, Bohemian Rhapsody
@@ -162,13 +160,13 @@ export function Repertoire() {
             className="flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
           >
             <span
-              className={`w-9 h-5 rounded-full relative transition-colors duration-300 ${
+              className={`inline-block w-9 h-5 rounded-full relative transition-colors duration-300 ${
                 showAll ? "bg-white/40" : "bg-white/15"
               }`}
             >
               <span
-                className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-transform duration-300 ${
-                  showAll ? "translate-x-4" : "translate-x-0.5"
+                className={`absolute top-0.5 w-4 h-4 rounded-full bg-white shadow transition-all duration-300 ${
+                  showAll ? "left-[18px]" : "left-0.5"
                 }`}
               />
             </span>

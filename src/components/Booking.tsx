@@ -1,4 +1,4 @@
-import { bandPhoto2, stickerBuchung, photoHilltopConcert, photoStreetPerformance, photoSchloss, photoVernissage, photoWeinMugge } from "#media";
+import { bandPhoto1, stickerBuchung, photoFormalHall, photoVernissage, photoWeinMugge } from "#media";
 import { ImageCycler } from "./ImageCycler";
 
 export function Booking() {
@@ -58,7 +58,7 @@ export function Booking() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <ImageCycler
-                images={[bandPhoto2, photoHilltopConcert, photoStreetPerformance, photoSchloss, photoVernissage, photoWeinMugge]}
+                images={[photoFormalHall, bandPhoto1, photoVernissage, photoWeinMugge]}
                 alt="Cello.Band Auftritt"
                 className="w-full h-auto"
                 interval={5000}
