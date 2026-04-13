@@ -18,8 +18,8 @@ export function AnnouncementBar() {
   if (upcoming.length === 0) return null;
 
   const next = upcoming[0];
-  const concertDate = new Date(next.date);
-  const diffDays = Math.ceil(
+  const concertDate = new Date(next.date + "T00:00:00");
+  const diffDays = Math.round(
     (concertDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)
   );
 
