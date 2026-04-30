@@ -35,7 +35,7 @@ function ImpressumPage() {
           <div className="bg-white rounded-2xl shadow-sm p-8 md:p-12 space-y-8">
             <section>
               <h2 className="font-serif text-xl font-semibold text-cello-dark mb-3">
-                Angaben gemäß § 5 TMG
+                Angaben gemäß § 5 DDG
               </h2>
               <address className="not-italic text-cello-muted leading-relaxed">
                 Henning Dieterichs
@@ -90,7 +90,7 @@ function ImpressumPage() {
 
       <footer className="bg-cello-dark text-white/60 py-8">
         <div className="max-w-7xl mx-auto px-6 text-center text-sm">
-          &copy; 2025 Die Cello.Band
+          Die Cello.Band
         </div>
       </footer>
     </>
