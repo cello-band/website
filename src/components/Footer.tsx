@@ -8,7 +8,6 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <img src={logo} alt="Cello.Band" className="h-8 brightness-200" />
-            <span className="text-sm">&copy; 2025 Die Cello.Band</span>
             <Link to="/impressum" className="text-sm hover:text-white transition-colors">
               Impressum
             </Link>

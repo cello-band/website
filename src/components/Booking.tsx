@@ -1,4 +1,4 @@
-import { bandPhoto1, stickerBuchung, photoFormalHall, photoVernissage, photoWeinMugge } from "#media";
+import { bandPhoto1, photoFormalHall, photoVernissage, photoWeinMugge } from "#media";
 import { ImageCycler } from "./ImageCycler";
 
 export function Booking() {
@@ -10,19 +10,19 @@ export function Booking() {
           <div className="space-y-8">
             <div>
               <p className="text-cello-orange font-medium text-sm uppercase tracking-wider mb-2">
-                Buchung
+                Kontakt
               </p>
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-cello-dark">
-                Wir spielen bei
+                Lust auf ein
                 <br />
-                <span className="text-cello-orange">Ihrem Event</span>
+                <span className="text-cello-orange">Konzert mit uns?</span>
               </h2>
             </div>
 
             <p className="text-cello-muted text-lg leading-relaxed">
-              Von Gala-Veranstaltungen bis hin zu privaten Feiern bieten wir flexible
-              Buchungsmöglichkeiten für jeden Anlass. Ob als Quartett oder Quintett — wir
-              passen unser Programm individuell an Ihre Wünsche an.
+              Wir freuen uns über Anfragen für Konzerte, Hauskonzerte, Vernissagen oder
+              andere Anlässe, bei denen Cello passt. Je nach Anlass spielen wir als
+              Quartett, Quintett, Sextett oder im vollen Oktett — schreib uns einfach.
             </p>
 
             <div className="space-y-4">
@@ -63,9 +63,6 @@ export function Booking() {
                 className="w-full h-auto"
                 interval={5000}
               />
-            </div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full overflow-hidden shadow-xl border-4 border-white hidden lg:block">
-              <img src={stickerBuchung} alt="" className="w-full h-full object-contain bg-cello-cream p-2" />
             </div>
           </div>
         </div>

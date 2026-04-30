@@ -5,7 +5,7 @@ import { AnnouncementBar } from "./AnnouncementBar";
 const navLinks = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "Über uns" },
-  { href: "#booking", label: "Buchung" },
+  { href: "#booking", label: "Kontakt" },
 ];
 
 export function Header() {

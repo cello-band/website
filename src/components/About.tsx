@@ -51,6 +51,10 @@ export function About() {
                 Matz. Je nach Anlass spielen wir als Quartett, Quintett, Sextett oder im
                 vollen Oktett.
               </p>
+              <p>
+                Wir sind ein Hobby-Ensemble und spielen aus Freude an der Musik und am
+                gemeinsamen Musizieren.
+              </p>
             </div>
           </div>
         </div>
